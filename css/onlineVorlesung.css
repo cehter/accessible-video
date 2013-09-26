@@ -1,0 +1,90 @@
+/* Color for Track-Elements */
+::cue(.myclass) { color: red;  font-size: 150%; }
+::cue(v[voice="Ahsan"]) { color: white; }
+::cue(#bigtext) { font-size: 150%; }
+
+#videoEnvironment{
+    width: 500px;
+    height: 450px;
+    position: relative;
+    background-color: black ;
+    float:left;
+}
+#transkiptionEnvironment{
+    float:left;
+    width: 550px;
+    height:450px;
+    padding: 15px;
+    overflow-y:scroll;
+}
+#controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    color: #E8E8E8;
+}
+#progressbar{
+    width: 80%;
+    float: left;
+    -webkit-appearance: none !important;
+    background:#E8E8E8;
+    height:10px;
+    padding-right: 5px;
+}
+#progressbar::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:#73856b;
+    height:13px;
+    width:13px;
+}
+#time{
+    color: #E8E8E8;
+}
+#volumebar {
+    width: 60px;
+    -webkit-appearance: none !important;
+    background:#E8E8E8;
+    height:10px;
+    padding-right: 5px;
+}
+#volumebar::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:#73856b;
+    height:13px;
+    width:13px;
+}
+button{
+    background: #E8E8E8;
+    border: 0;
+    color: black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+button:focus, button:hover{
+    border: 3px black;
+    background: #a6cd93;
+}
+#clean{
+    float:clean;
+}
+select{
+    background: #E8E8E8;
+    color: black;
+}
+select:focus, select:hover{
+    background: #a6cd93;
+}
+.cue{
+    background: #E8E8E8;
+}
+img.icons{
+    margin-top: 3px; 
+    padding: 0;
+}
+#current{
+    background: #66CC33;
+}

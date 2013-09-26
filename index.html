@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/onlineVorlesung.css" type="text/css">
+  <head>
+    <title>Online-Vorlesung</title>
+  </head>
+  <body>
+    <p class="keyControls">
+      Keyboard Controls:
+      <ul>
+        <li><strong>S:</strong> Start/Stop</li>
+        <li><strong>V:</strong> Springe Vor</li>
+        <li><strong>Z:</strong> Springe Zurück</li>
+        <li><strong>F:</strong> Fullscreen</li>
+      </ul>
+    </p>
+    <div id="videoEnvironment">
+      <video id="video" width="500" height="400" >
+        <source src="videos/sintel.mp4" type="video/mp4" preload="metadata"/>
+        <source src="videos/sintel.ogg" type="video/ogg" preload="metadata"/>
+        <source src="videos/sintel.webm" type="video/webm" preload="metadata"/>
+        <track src="vtt/sintel_de.vtt" label="german sub" kind="subtitles" srclang="de" default/>
+        <track src="vtt/sintel_en.vtt" label="english sub" kind="subtitles" srclang="en"  />
+        <track src="vtt/sintel-en_desc.vtt" label="english descriptions" kind="descriptions" srclang="de"/>
+      </video>
+      <div id="controls">
+        <input type="range" value="0" id="progressbar">
+        <div id="time">00:00 | 00:00</div>
+        <button type="button" class="iconButton" id="playPauseButton" name="Start/Stop">Start</button>
+        <button type="button" class="iconButton" id="muteButton" name="Ton an/aus">Ton aus</button>
+        <input type="range" id="volumebar" min="0" max="1" step="0.1" value="1">
+        <button type="button" id="sizeButton" name="Fullscreen">Full-Screen</button>
+        <div class="controls-img"></div>
+        <select id="subtitle" onchange="showSelectedTrack(this)" name="Untertitel">
+          <option value="sub_off">Untertitel</option>
+          <option value="german sub" data-foo="sub_de" selected="selected">Deutsche Untertitle</option>
+          <option value="english sub" data-foo="sub_en">Englische Untertitle</option>
+        </select>
+        <select id="desciption" onchange="showSelectedDesciption(this)" name="Audiobeschreibung">
+          <option value="desc_off">Audiobeschreibung</option>
+          <option value="german descriptions" data-foo="desc_de">Englisch</option>
+        </select>
+      </div>
+
+    </div>
+    <div id="transkiptionEnvironment">
+      <button type="button" class="iconButton" id="transkiptionButton">Transkription</button>
+    </div>
+    <div id="clean"></div>
+    <script type="text/javascript" src="js/onlineVorlesung.js"></script>
+  </body>
+</html>
